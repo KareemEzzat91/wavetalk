@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wavetalk/Screens/AuthScreen/LoginScreen/LoginScreen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -229,7 +230,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
                 InkWell(
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (c)=>LoginScreen()));
+                  },
                   child: Text(
                     "Log in ",
                     style: TextStyle(
