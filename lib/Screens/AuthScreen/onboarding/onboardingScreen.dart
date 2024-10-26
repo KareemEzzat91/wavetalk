@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wavetalk/Screens/AuthScreen/LoginScreen/LoginScreen.dart';
+import 'package:wavetalk/Screens/AuthScreen/RegisterScreen/RegisterScreen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -196,19 +197,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               duration: Duration(milliseconds: 500),
               child: GestureDetector(
                 onTap: (){},
-                child: Container(
-                  width: width * 0.9,
-                  height: 68,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Sign up with mail",
-                      style: GoogleFonts.akshar(
-                        fontSize: 30,
-                        color: Color(0xff000E08),
+                child: InkWell(
+                  onTap: (){Navigator.pushReplacement(context, MaterialPageRoute(builder: (c)=>RegisterScreen()));},
+                  child: Container(
+                    width: width * 0.9,
+                    height: 68,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Sign up with mail",
+                        style: GoogleFonts.akshar(
+                          fontSize: 30,
+                          color: Color(0xff000E08),
+                        ),
                       ),
                     ),
                   ),
@@ -218,7 +222,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
           // Login section
           Positioned(
-            left: width * 0.17,
+            left: width * 0.24,
             top: height * 0.92,
             child: Row(
               children: [

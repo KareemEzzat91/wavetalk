@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wavetalk/Screens/AuthScreen/onboarding/onboardingScreen.dart';
 import 'package:wavetalk/Theme/ThemeCubit/themes_cubit.dart';
 
 class Homescreen extends StatelessWidget {
@@ -17,6 +19,14 @@ class Homescreen extends StatelessWidget {
         actions: [
           InkWell(onTap: (){bloc.toggleTheme(!iSDarkMode);},child: Icon(iSDarkMode ?Icons.nightlight_round_sharp:Icons.sunny))
         ],
+      ),
+      body: Center(
+        child: MaterialButton(onPressed: ()async{
+          await FirebaseAuth.instance.signOut();
+          Navigator.pushReplacement(context,MaterialPageRoute(builder: (c)=>OnboardingScreen()) );
+
+
+        },child: Text("Sign out"),),
       ),
 
     );
