@@ -107,15 +107,14 @@ class LoginCubit extends Cubit<LoginState> {
       }
         else{emit(errorLoadingState("error"));}
         }
-    } on FirebaseAuthException catch (e) {
-      if (e.code == 'user-not-found') {
-        emit(errorLoadingState('No user found for that email.'));
-      } else if (e.code == 'wrong-password') {
-        emit(errorLoadingState('Wrong password provided for that user.'));
+    }
+    catch (e) {
+      emit(errorLoadingState(e.toString()));
+
       }
     }
   }
   Future<void>resetpassword ()async{
 
   }
-}
+

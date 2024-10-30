@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "823241191431",
+    "project_id": "wavetalk-c93ab",
+    "storage_bucket": "wavetalk-c93ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823241191431:android:d2cd9f2ce3ae1d01737aa2",
+        "android_client_info": {
+          "package_name": "com.example.wavetalk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB89s5sO3CcIAJ2VcHpbdfUJWfn9YA5DH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
